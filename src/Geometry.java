@@ -113,17 +113,17 @@ public class Geometry
         }
 //check if a point is inside each triangle
         System.out.println("Enter point to check if is inside triangle:");
-        System.out.print("Enter x: ");
-        double px = scanner.nextDouble();
-        System.out.print("Enter y: ");
-        double py = scanner.nextDouble();
-        GeometryPoint pointToCheck = new GeometryPoint(px, py);
-        for (int i = 0; i < numTriangles; i++) {
-            if (triangles[i].containsPoint(pointToCheck)) {
-                System.out.println("The point is inside Triangle " + (i + 1));
+        System.out.print("Enter x-coordinate: ");
+        double inputX = scanner.nextDouble();
+        System.out.print("Enter y-coordinate: ");
+        double inputY = scanner.nextDouble();
+        GeometryPoint pointToCheck = new GeometryPoint(inputX, inputY);
+        for (int index = 0; index < numTriangles; index++) {
+            if (triangles[index].containsPoint(pointToCheck)) {
+                System.out.println("The point is inside Triangle " + (index + 1));
             } else {
-                System.out.println("The point is not inside Triangle " + (i + 1));
+                System.out.println("The point is not inside Triangle " + (index + 1));
             }
-        }
+    }
     }
 }
